@@ -1,7 +1,7 @@
 import express from 'express';
 import { Low, JSONFile } from 'lowdb';
 import bodyParser from 'body-parser';
-const cors = require('cors');
+import cors from 'cors';
 const app = express();
 app.use(express.json());
 const adapter = new JSONFile('db.json');
