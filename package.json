@@ -26,5 +26,8 @@
   "type": "module",
   "devDependencies": {
     "@faker-js/faker": "^7.4.0"
+  },
+  "engines": {
+    "node": "v.16.x"
   }
 }
