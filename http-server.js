@@ -1,6 +1,7 @@
 import express from 'express';
 import { Low, JSONFile } from 'lowdb';
 import bodyParser from 'body-parser';
+const cors = require('cors');
 const app = express();
 app.use(express.json());
 const adapter = new JSONFile('db.json');
@@ -9,6 +10,12 @@ await db.read();
 
 //serving static files
 app.use(express.static('public'));
+
+//allowing cross-origin
+app.use(cors());
+
+//modification for Heroku
+let port = process.env.PORT || 3000;
 
 //init data store
 db.data ||= {users:[]};
@@ -49,7 +56,7 @@ app.post('/add-user', async (req, res) => {
 });
 
 //init server
-app.listen(3000, () => {
-    console.log('Server running in localhost:3000');
+app.listen(port, () => {
+    console.log(`Server running in ${port}`);
 });
 
