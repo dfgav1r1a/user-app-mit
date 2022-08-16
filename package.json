@@ -1,0 +1,30 @@
+{
+  "name": "user-app",
+  "version": "1.0.0",
+  "description": "simple app to generate user with a basic three tiered app",
+  "main": "http-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install",
+    "start": "node http-server.js"
+  },
+  "keywords": [
+    "MIT",
+    "week-23",
+    "back-end",
+    "three-tiered-app"
+  ],
+  "author": "Daniel",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "express": "^4.18.1",
+    "faker": "^6.6.6",
+    "lowdb": "^3.0.0",
+    "superagent": "^8.0.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0"
+  }
+}
